@@ -4,7 +4,8 @@ FROM node:14
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package.json /
+COPY /tmp/git/Simple-express-docker/package.json /
+COPY /tmp/git/Simple-express-docker/index.js /
 
 RUN npm install
 
