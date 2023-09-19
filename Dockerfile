@@ -1,7 +1,11 @@
 FROM node:14
 
+RUN apt-get update && \
+    apt-get install rpm
+
+
 RUN rpm --rebuilddb \
-RUN yum -y install java-1.8.0-openjdk.x86_64
+&& yum -y install java-1.8.0-openjdk.x86_64
 
 # Create app directory
 WORKDIR /usr/src/app
